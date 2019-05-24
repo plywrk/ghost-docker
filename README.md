@@ -4,6 +4,8 @@ Run Ghost Blogging platform on Docker with `docker-compose` using latest version
 
 ## How to use it
 
+- Install [Docker Desktop](https://www.docker.com/products/docker-desktop)
+- Clone this repo
 - Run `docker-compose up`
 - Open <http://localhost:2368/ghost> in the browser and setup your Ghost
 
@@ -13,9 +15,10 @@ Run Ghost Blogging platform on Docker with `docker-compose` using latest version
 
 ```ssh
 config.development.json
-./ghost/content/
-|- /data/
-|- /themes/
+./ghost/
+    |- /content/
+        |- /data/
+        |- /themes/
 ```
 
 ## Start Development
