@@ -1,0 +1,15 @@
+version: '3.7'
+
+services:
+
+  ghost:
+    image: ghost:latest
+    restart: always
+    container_name: ghost
+    volumes:
+      - ./ghost/content:/var/lib/ghost/content
+      - ./ghost/config.development.json:/var/lib/ghost/config.development.json
+    expose:
+      - "2368"
+    environment:
+      - NODE_ENV=development
