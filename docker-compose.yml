@@ -1,15 +1,14 @@
-version: '3.7'
+version: "3.7"
 
 services:
 
   ghost:
     image: ghost:latest
+    ports:
+      - "2019:2368"
+    env_file: .env
     restart: always
     container_name: ghost
+    working_dir: /var/lib/ghost
     volumes:
-      - ./ghost/content:/var/lib/ghost/content
-      - ./ghost/config.development.json:/var/lib/ghost/config.development.json
-    expose:
-      - "2368"
-    environment:
-      - NODE_ENV=development
+      - ./content:/var/lib/ghost/content
